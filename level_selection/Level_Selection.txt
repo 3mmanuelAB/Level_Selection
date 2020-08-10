@@ -1,0 +1,47 @@
+def select_nu (min_len =2, max_len=4, nu_trie=5):
+    select = None
+    while select != 0:
+        select = input (""" please enter a value between 1 and 4 to select type
+                            1 - simple
+                            2 - easy 
+                            3 - fair
+                            4 - hard
+
+                            the enter 0 to exist""")
+
+
+
+
+        try:
+            select = int(select)
+            while select != 0:
+
+                if select == 1:
+                    min_len =2
+                    max_len =4
+                    nu_tries =5
+                elif select == 2:
+                    min_len = 4
+                    max_len = 6
+                    nu_tries = 5
+                elif select == 3:
+                    min_len = 6
+                    max_len = 8
+                    nu_tries = 5
+                elif select == 4:
+                    min_len = 8
+                    max_len = 10
+                    nu_tries = 5
+                else:
+                    print("you have entered a wrong selection")
+
+                se = {
+                    "min_len" : min_len,
+                    "max_len" : max_len,
+                    "nu_tries" : nu_tries}
+                return se
+        except:
+                        print("you have entered a wrong selection")
+
+
+
